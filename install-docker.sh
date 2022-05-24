@@ -1,4 +1,5 @@
 #!/bin/bash
+export DEBIAN_FRONTEND="noninteractive"
 
 echo "Refreshing Apt Repository"
 sudo apt-get update -y
