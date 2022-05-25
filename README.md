@@ -422,5 +422,5 @@ In this section will shall spin up an EC2 instance with our built image.
 ## References
 
 - [Introduction to Packer](https://learn.hashicorp.com/tutorials/packer/aws-get-started-build-image?in=packer/aws-get-started)
-- [Introduction to Pcker provisioners](https://learn.hashicorp.com/tutorials/packer/aws-get-started-provision)
+- [Introduction to Packer provisioners](https://learn.hashicorp.com/tutorials/packer/aws-get-started-provision)
 - [Getting started with Jenkins](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04)
