@@ -60,6 +60,7 @@ In this section, we are going to install Jenkins without docker on an ec2 instan
   ```bash
    java --version
   ```
+***
 ## Installation of Jenkins
 - Add GPG keys
   ```bash
@@ -100,14 +101,14 @@ You can get the password from the given location using the cat command in the te
     sudo cat /var/lib/jenkins/secrets/initialAdminPassword
    ```
  This command will print the password straight out and you can copy and paste it into the password field on the Jenkins Unlock screen and click on the “Continue” button.
-
+***
 ## Installation Cont'd
 It will navigate you to the next screen where it will ask for either “install the suggested plugins” or “select the plugins of your choice”.
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-19.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.2 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
-
+***
 ## Installation Cont'd
 Select the “Install suggested plugins”. On the click, it will start installing the default plugins.
 
@@ -115,7 +116,7 @@ Select the “Install suggested plugins”. On the click, it will start installi
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-20.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.3 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
-
+***
 ## Installation Cont'd
 
 After the successful installation of plugins, it will ask for the setting of the admin user’s user name, password, and email address.
@@ -123,7 +124,7 @@ After the successful installation of plugins, it will ask for the setting of the
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/21-1.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.4 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
-
+***
 
 ## Installation Cont'd
 Provide the required input fields and hit the “Save and Continue” button.
@@ -132,7 +133,7 @@ Provide the required input fields and hit the “Save and Continue” button.
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-22.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.5 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
-
+***
 ## Installation Cont'd
 Next, it will navigate you to a page for configuring the Jenkins URL. 
 
@@ -140,7 +141,7 @@ Next, it will navigate you to a page for configuring the Jenkins URL.
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-23.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
-
+***
 ## Installation Cont'd
 For now, go with the default auto-generated URL and click on the “Save and Finish” button in the bottom right corner.
 
@@ -265,7 +266,7 @@ provisioner "shell" {
 }
 ```
 This Packer template  builds an AWS Ubuntu AMI pre-bundled with Java and Jenkins. In the following sections, we shall  review each block of this template in more detail.
-
+***
 ### Packer Block
 
 
@@ -282,7 +283,7 @@ packer {
 The packer {} block contains Packer settings, including specifying a required Packer version.
 
 In addition, you will find required_plugins block in the Packer block, which specifies all the plugin required by the template to build your image. Even though Packer is packaged into a single binary, it depends on plugins for much of its functionality. Some of these plugins, like the Amazon AMI Builder (AMI builder) which you will to use, are built, maintained, and distributed by HashiCorp but anyone can write and use plugins.
-
+***
 ### Source Block
 
 
@@ -309,7 +310,7 @@ The source block configures a specific builder plugin, which is then invoked by 
 A source block has two important labels: a builder type and a name. These two labels together will allow us to uniquely reference sources later on when we define build runs.
 
 In the example template, the builder type is amazon-ebs and the name is ubuntu
-
+***
 ### Build Block
 
 
@@ -324,6 +325,7 @@ The build block defines what Packer should do with the EC2 instance after it lau
 
 In the example template, the build block references the AMI defined by the source block above (source.amazon-ebs.ubuntu).
 
+***
 ### Provisioners
 
 ```bash
