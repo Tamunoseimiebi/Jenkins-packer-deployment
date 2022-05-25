@@ -61,6 +61,8 @@ In this section, we are going to install Jenkins without docker on an ec2 instan
    java --version
   ```
 ***
+
+
 ## Installation of Jenkins
 - Add GPG keys
   ```bash
@@ -84,7 +86,10 @@ In this section, we are going to install Jenkins without docker on an ec2 instan
    ```bash
     sudo systemctl start jenkins.service && sudo systemctl status jenkins.service
    ```
+
 ***
+
+
 ## Set Up Jenkins
 To set up Jenkins, type your domain name or IP address along with port 8080 in the browser’s address bar, and you should have the Unlock Jenkins page asking for a password, like the shown picture below.
 <figure>
@@ -93,7 +98,9 @@ To set up Jenkins, type your domain name or IP address along with port 8080 in t
 </figure>
 <br />
 
+
 ***
+
 ## Enter default Password
 You can get the password from the given location using the cat command in the terminal. The command for getting the password would be like this:
 
@@ -101,14 +108,18 @@ You can get the password from the given location using the cat command in the te
     sudo cat /var/lib/jenkins/secrets/initialAdminPassword
    ```
  This command will print the password straight out and you can copy and paste it into the password field on the Jenkins Unlock screen and click on the “Continue” button.
+ 
 ***
+
 ## Installation Cont'd
 It will navigate you to the next screen where it will ask for either “install the suggested plugins” or “select the plugins of your choice”.
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-19.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.2 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
+
 ***
+
 ## Installation Cont'd
 Select the “Install suggested plugins”. On the click, it will start installing the default plugins.
 
@@ -116,7 +127,9 @@ Select the “Install suggested plugins”. On the click, it will start installi
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-20.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.3 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
+
 ***
+
 ## Installation Cont'd
 
 After the successful installation of plugins, it will ask for the setting of the admin user’s user name, password, and email address.
@@ -124,6 +137,8 @@ After the successful installation of plugins, it will ask for the setting of the
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/21-1.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.4 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
+
+
 ***
 
 ## Installation Cont'd
@@ -133,7 +148,9 @@ Provide the required input fields and hit the “Save and Continue” button.
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-22.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.5 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
+
 ***
+
 ## Installation Cont'd
 Next, it will navigate you to a page for configuring the Jenkins URL. 
 
@@ -141,8 +158,11 @@ Next, it will navigate you to a page for configuring the Jenkins URL.
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-23.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
+
 ***
+
 ## Installation Cont'd
+
 For now, go with the default auto-generated URL and click on the “Save and Finish” button in the bottom right corner.
 
 On the completion of the Jenkins setup, you can have the screen with the success message “Jenkins is ready!”, as shown below. 
@@ -153,6 +173,7 @@ On the completion of the Jenkins setup, you can have the screen with the success
 </figure>
 
 ***
+
 ##  Part 2
 
 ### Create an AMI with Harshicorp Packer
@@ -200,6 +221,7 @@ Available commands are:
 ```
 
 ***
+
 ### Writing a Packer Template
 
 A Packer template is a configuration file that defines the image you want to build and how to build it. Packer templates use the Hashicorp Configuration Language (HCL).
@@ -283,7 +305,9 @@ packer {
 The packer {} block contains Packer settings, including specifying a required Packer version.
 
 In addition, you will find required_plugins block in the Packer block, which specifies all the plugin required by the template to build your image. Even though Packer is packaged into a single binary, it depends on plugins for much of its functionality. Some of these plugins, like the Amazon AMI Builder (AMI builder) which you will to use, are built, maintained, and distributed by HashiCorp but anyone can write and use plugins.
+
 ***
+
 ### Source Block
 
 
@@ -310,7 +334,9 @@ The source block configures a specific builder plugin, which is then invoked by 
 A source block has two important labels: a builder type and a name. These two labels together will allow us to uniquely reference sources later on when we define build runs.
 
 In the example template, the builder type is amazon-ebs and the name is ubuntu
+
 ***
+
 ### Build Block
 
 
@@ -326,6 +352,7 @@ The build block defines what Packer should do with the EC2 instance after it lau
 In the example template, the build block references the AMI defined by the source block above (source.amazon-ebs.ubuntu).
 
 ***
+
 ### Provisioners
 
 ```bash
@@ -368,7 +395,9 @@ These commands are used to install Java and also verify that it installed correc
  "sudo apt-get install jenkins -y",
   ```
 These commands are used to install Jenkins alongside its GPG keys.
+
 ***
+
 ## Authenticating AWS
 Before you can build the AMI, you need to provide your AWS credentials to Packer. These credentials have permissions to create, modify and delete EC2 instances
 
@@ -376,6 +405,7 @@ Now set your secret key.
  ```bash
     export AWS_SECRET_ACCESS_KEY="<YOUR_AWS_SECRET_ACCESS_KEY>"
   ```
+
 ***
 
 To alow Packer to access your IAM user credentials, set your AWS access key ID as an environment variable.
@@ -409,7 +439,9 @@ With our packer template setup, we shall proceed to building our image. To begin
 <figcaption align= "center"><b>Fig.8 Packer Build Output </b></figcaption>
 </figure> 
     <br>
+    
 ***
+
 Visit the [AWS](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Images:visibility=owned-by-me;search=learn-packer-linux-aws;sort=name) Image page to verify that your image has been deployed successfully.
 
  <figure>
@@ -443,6 +475,7 @@ In this section will shall spin up an EC2 instance with our built image.
     <br>
 
 ***
+
 ## Summary
  We successfully deployed Jenkins on AWS and also built an AMI with Packer that is pre-bundled with Jenkins.
  
