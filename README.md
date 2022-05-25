@@ -371,6 +371,8 @@ In this section will shall spin up an EC2 instance with our built image.
 
 - Finally, click on Launch Instance. Your image should now successfully spin up an EC2 instance.
 
+## Summary
+ We successfully deployed Jenkins on AWS and also built an AMI with Packer that is pre-bundled with Jenkins.
 ## References
 
 - [Introduction to Packer](https://learn.hashicorp.com/tutorials/packer/aws-get-started-build-image?in=packer/aws-get-started)
