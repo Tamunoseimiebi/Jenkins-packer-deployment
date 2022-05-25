@@ -141,13 +141,14 @@ Next, it will navigate you to a page for configuring the Jenkins URL.
 <figcaption align = "center"><b>Fig.5 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
+## Installation Cont'd
 For now, go with the default auto-generated URL and click on the “Save and Finish” button in the bottom right corner.
 
 On the completion of the Jenkins setup, you can have the screen with the success message “Jenkins is ready!”, as shown below. 
 
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-24.png" alt="Trulli" style="width:70%">
-<figcaption align = "center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
+<figcaption align ="center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
 ***
