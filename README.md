@@ -359,6 +359,21 @@ These commands are used to install Java and also verify that it installed correc
  "sudo apt-get install jenkins -y",
   ```
 These commands are used to install Jenkins alongside its GPG keys.
+***
+## Authenticating AWS
+Before you can build the AMI, you need to provide your AWS credentials to Packer. These credentials have permissions to create, modify and delete EC2 instances
+
+Now set your secret key.
+ ```bash
+    export AWS_SECRET_ACCESS_KEY="<YOUR_AWS_SECRET_ACCESS_KEY>"
+  ```
+***
+
+To alow Packer to access your IAM user credentials, set your AWS access key ID as an environment variable.
+ ```bash
+    export AWS_ACCESS_KEY_ID="<YOUR_AWS_ACCESS_KEY_ID>"
+  ```
+***
 
 ## Building our Packer Image
 With our packer template setup, we shall proceed to building our image. To begin, complete the following procedures:
