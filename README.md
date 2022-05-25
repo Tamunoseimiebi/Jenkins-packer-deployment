@@ -87,7 +87,7 @@ In this section, we are going to install Jenkins without docker on an ec2 instan
 To set up Jenkins, type your domain name or IP address along with port 8080 in the browser’s address bar, and you should have the Unlock Jenkins page asking for a password, like the shown picture below.
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-16.png" alt="Trulli" style="width:70%">
-<figcaption align="center"><b>Fig.1 Jenkins Installation on Ubuntu </b></figcaption>
+<figcaption align="right"><b>Fig.1 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
 
