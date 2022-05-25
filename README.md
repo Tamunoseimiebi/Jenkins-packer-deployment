@@ -402,14 +402,19 @@ With our packer template setup, we shall proceed to building our image. To begin
   ```
    Packer will begin the build process, this might take a while depending on your network speed and packages required to download.  Packer will print output similar to what is shown below when the build is complete.
    
-    <figure>
-    <img src="images/7-aws.png" alt="Packer build" width="75%" >
-    <figcaption>Packer Build</figcaption>
-   </figure>   
+ <figure>
+<img src="images/7-aws.png" alt="build" style="width:100%">
+<figcaption align= "center"><b>Fig.7 Packer Build Output </b></figcaption>
+</figure> 
     <br>
 
 Visit the [AWS](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Images:visibility=owned-by-me;search=learn-packer-linux-aws;sort=name) Image page to verify that your image has been deployed successfully.
 
+ <figure>
+<img src="images/2-aws.png" alt="build" style="width:100%">
+<figcaption align= "center"><b>Fig.7 AWS AMI </b></figcaption>
+</figure> 
+    <br>
 
 ## Task 3: Deploy the AMI image to EC2
 
@@ -417,11 +422,28 @@ In this section will shall spin up an EC2 instance with our built image.
 
 - Visit the [AWS](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Images:visibility=owned-by-me;search=learn-packer-linux-aws;sort=name) AMI page on your dashboard
 
+<figure>
+<img src="images/2-aws.png" alt="build" style="width:100%">
+<figcaption align= "center"><b>Fig.7 AWS AMI </b></figcaption>
+</figure> 
+    <br>
+
 - Select the desired image and click on launch instance from AMI
 
 - Fill in the required fields: Name, security group, key pair and networking.
 
+ <figure>
+<img src="images/5-aws.png" alt="build" style="width:100%">
+<figcaption align= "center"><b>Fig.7 Launching AWS AMI </b></figcaption>
+</figure> 
+    <br>
+
 - Finally, click on Launch Instance. Your image should now successfully spin up an EC2 instance.
+ <figure>
+<img src="images/3-aws.png" alt="build" style="width:100%">
+<figcaption align= "center"><b>Fig.7 Launching AWS AMI </b></figcaption>
+</figure> 
+    <br>
 ***
 ## Summary
  We successfully deployed Jenkins on AWS and also built an AMI with Packer that is pre-bundled with Jenkins.
