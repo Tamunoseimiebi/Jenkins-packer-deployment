@@ -115,7 +115,9 @@ Select the “Install suggested plugins”. On the click, it will start installi
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-20.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.3 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
+
 ## Installation Cont'd
+
 After the successful installation of plugins, it will ask for the setting of the admin user’s user name, password, and email address.
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/21-1.png" alt="Trulli" style="width:70%">
