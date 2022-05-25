@@ -88,7 +88,8 @@ To set up Jenkins, type your domain name or IP address along with port 8080 in t
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-16.png" alt="Trulli" style="width:70%">
 <figcaption align="right"><b>Fig.1 Jenkins Installation on Ubuntu </b></figcaption> 
-</figure> &nbsp;
+</figure>
+<br />
 
 
 You can get the password from the given location using the cat command in the terminal. The command for getting the password would be like this:
