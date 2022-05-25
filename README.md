@@ -370,3 +370,9 @@ In this section will shall spin up an EC2 instance with our built image.
 - Fill in the required fields: Name, security group, key pair and networking.
 
 - Finally, click on Launch Instance. Your image should now successfully spin up an EC2 instance.
+
+## References
+
+- [Introduction to Packer](https://learn.hashicorp.com/tutorials/packer/aws-get-started-build-image?in=packer/aws-get-started)
+- [Introduction to Pcker provisioners](https://learn.hashicorp.com/tutorials/packer/aws-get-started-provision)
+- [Getting started with Jenkins](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04)
