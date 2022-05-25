@@ -402,10 +402,10 @@ With our packer template setup, we shall proceed to building our image. To begin
   ```
    Packer will begin the build process, this might take a while depending on your network speed and packages required to download.  Packer will print output similar to what is shown below when the build is complete.
    
- <figure>
-<img src="https://github.com/Tamunoseimiebi/Jenkins-packer-deployment/images/7-aws.png" alt="Trulli" style="width:100%">
-<figcaption align = "center"><b>Fig.6 Packer build Output </b></figcaption>
-</figure>
+    <figure>
+    <img src="images/7-aws.png" alt="Packer build" width="75%" >
+    <figcaption>Packer Build</figcaption>
+   </figure>   
     <br>
 
 Visit the [AWS](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Images:visibility=owned-by-me;search=learn-packer-linux-aws;sort=name) Image page to verify that your image has been deployed successfully.
