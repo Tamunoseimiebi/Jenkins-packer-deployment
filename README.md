@@ -130,7 +130,7 @@ Provide the required input fields and hit the “Save and Continue” button.
 
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-22.png" alt="Trulli" style="width:70%">
-<figcaption align = "center"><b>Fig.4 Jenkins Installation on Ubuntu </b></figcaption>
+<figcaption align = "center"><b>Fig.5 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
 ## Installation Cont'd
@@ -138,7 +138,7 @@ Next, it will navigate you to a page for configuring the Jenkins URL.
 
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-23.png" alt="Trulli" style="width:70%">
-<figcaption align = "center"><b>Fig.5 Jenkins Installation on Ubuntu </b></figcaption>
+<figcaption align = "center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
 ## Installation Cont'd
@@ -148,7 +148,7 @@ On the completion of the Jenkins setup, you can have the screen with the success
 
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-24.png" alt="Trulli" style="width:70%">
-<figcaption align ="center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
+<figcaption align ="center"><b>Fig.7 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
 ***
@@ -404,7 +404,7 @@ With our packer template setup, we shall proceed to building our image. To begin
    
  <figure>
 <img src="images/7-aws.png" alt="build" style="width:100%">
-<figcaption align= "center"><b>Fig.7 Packer Build Output </b></figcaption>
+<figcaption align= "center"><b>Fig.8 Packer Build Output </b></figcaption>
 </figure> 
     <br>
 
@@ -412,7 +412,7 @@ Visit the [AWS](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-w
 
  <figure>
 <img src="images/2-aws.png" alt="build" style="width:100%">
-<figcaption align= "center"><b>Fig.7 AWS AMI </b></figcaption>
+<figcaption align= "center"><b>Fig.9 AWS AMI </b></figcaption>
 </figure> 
     <br>
 
@@ -424,7 +424,7 @@ In this section will shall spin up an EC2 instance with our built image.
 
 <figure>
 <img src="images/2-aws.png" alt="build" style="width:100%">
-<figcaption align= "center"><b>Fig.7 AWS AMI </b></figcaption>
+<figcaption align= "center"><b>Fig.10 AWS AMI </b></figcaption>
 </figure> 
     <br>
 
@@ -434,14 +434,14 @@ In this section will shall spin up an EC2 instance with our built image.
 
  <figure>
 <img src="images/5-aws.png" alt="build" style="width:100%">
-<figcaption align= "center"><b>Fig.7 Launching AWS AMI </b></figcaption>
+<figcaption align= "center"><b>Fig.11 Launching AWS AMI </b></figcaption>
 </figure> 
     <br>
 
 - Finally, click on Launch Instance. Your image should now successfully spin up an EC2 instance.
  <figure>
 <img src="images/3-aws.png" alt="build" style="width:100%">
-<figcaption align= "center"><b>Fig.7 Launching AWS AMI </b></figcaption>
+<figcaption align= "center"><b>Fig.12  AWS AMI launched successfuly </b></figcaption>
 </figure> 
     <br>
 
