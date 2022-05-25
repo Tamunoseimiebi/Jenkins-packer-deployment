@@ -14,6 +14,7 @@ For this exercise follow the instructions below.
 6. Organize your code.
 7. write a proper Readme.Md to explain your choices and the process.
 
+***
 
 
 
@@ -82,11 +83,17 @@ In this section, we are going to install Jenkins without docker on an ec2 instan
    ```bash
     sudo systemctl start jenkins.service && sudo systemctl status jenkins.service
    ```
-
+***
 ## Set Up Jenkins
 To set up Jenkins, type your domain name or IP address along with port 8080 in the browser’s address bar, and you should have the Unlock Jenkins page asking for a password, like the shown picture below.
-https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-16.png
+<figure>
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-16.png" alt="Trulli" style="width:70%">
+<figcaption align="right"><b>Fig.1 Jenkins Installation on Ubuntu </b></figcaption> 
+</figure>
+<br />
 
+***
+## Enter default Password
 You can get the password from the given location using the cat command in the terminal. The command for getting the password would be like this:
 
    ```bash
@@ -94,33 +101,57 @@ You can get the password from the given location using the cat command in the te
    ```
  This command will print the password straight out and you can copy and paste it into the password field on the Jenkins Unlock screen and click on the “Continue” button.
 
+## Installation Cont'd
 It will navigate you to the next screen where it will ask for either “install the suggested plugins” or “select the plugins of your choice”.
-https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-19.png
+<figure>
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-19.png" alt="Trulli" style="width:70%">
+<figcaption align = "center"><b>Fig.2 Jenkins Installation on Ubuntu </b></figcaption>
+</figure>
 
+## Installation Cont'd
 Select the “Install suggested plugins”. On the click, it will start installing the default plugins.
 
-https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-20.png
+<figure>
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-20.png" alt="Trulli" style="width:70%">
+<figcaption align = "center"><b>Fig.3 Jenkins Installation on Ubuntu </b></figcaption>
+</figure>
+
+## Installation Cont'd
 
 After the successful installation of plugins, it will ask for the setting of the admin user’s user name, password, and email address.
-https://linuxhint.com/wp-content/uploads/2017/12/21-1.png
+<figure>
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/21-1.png" alt="Trulli" style="width:70%">
+<figcaption align = "center"><b>Fig.4 Jenkins Installation on Ubuntu </b></figcaption>
+</figure>
 
 
-
+## Installation Cont'd
 Provide the required input fields and hit the “Save and Continue” button.
 
-https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-22.png
+<figure>
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-22.png" alt="Trulli" style="width:70%">
+<figcaption align = "center"><b>Fig.4 Jenkins Installation on Ubuntu </b></figcaption>
+</figure>
 
+## Installation Cont'd
 Next, it will navigate you to a page for configuring the Jenkins URL. 
 
-https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-23.png
+<figure>
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-23.png" alt="Trulli" style="width:70%">
+<figcaption align = "center"><b>Fig.5 Jenkins Installation on Ubuntu </b></figcaption>
+</figure>
 
+## Installation Cont'd
 For now, go with the default auto-generated URL and click on the “Save and Finish” button in the bottom right corner.
 
 On the completion of the Jenkins setup, you can have the screen with the success message “Jenkins is ready!”, as shown below. 
 
-https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-24.png
+<figure>
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-24.png" alt="Trulli" style="width:70%">
+<figcaption align ="center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
+</figure>
 
-
+***
 ##  Part 2
 
 ### Create an AMI with Harshicorp Packer
@@ -167,7 +198,7 @@ Available commands are:
     version         Prints the Packer version
 ```
 
-
+***
 ### Writing a Packer Template
 
 A Packer template is a configuration file that defines the image you want to build and how to build it. Packer templates use the Hashicorp Configuration Language (HCL).
@@ -335,6 +366,21 @@ These commands are used to install Java and also verify that it installed correc
  "sudo apt-get install jenkins -y",
   ```
 These commands are used to install Jenkins alongside its GPG keys.
+***
+## Authenticating AWS
+Before you can build the AMI, you need to provide your AWS credentials to Packer. These credentials have permissions to create, modify and delete EC2 instances
+
+Now set your secret key.
+ ```bash
+    export AWS_SECRET_ACCESS_KEY="<YOUR_AWS_SECRET_ACCESS_KEY>"
+  ```
+***
+
+To alow Packer to access your IAM user credentials, set your AWS access key ID as an environment variable.
+ ```bash
+    export AWS_ACCESS_KEY_ID="<YOUR_AWS_ACCESS_KEY_ID>"
+  ```
+***
 
 ## Building our Packer Image
 With our packer template setup, we shall proceed to building our image. To begin, complete the following procedures:
@@ -370,3 +416,11 @@ In this section will shall spin up an EC2 instance with our built image.
 - Fill in the required fields: Name, security group, key pair and networking.
 
 - Finally, click on Launch Instance. Your image should now successfully spin up an EC2 instance.
+***
+## Summary
+ We successfully deployed Jenkins on AWS and also built an AMI with Packer that is pre-bundled with Jenkins.
+## References
+
+- [Introduction to Packer](https://learn.hashicorp.com/tutorials/packer/aws-get-started-build-image?in=packer/aws-get-started)
+- [Introduction to Packer provisioners](https://learn.hashicorp.com/tutorials/packer/aws-get-started-provision)
+- [Getting started with Jenkins](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04)
