@@ -91,6 +91,9 @@ To set up Jenkins, type your domain name or IP address along with port 8080 in t
 </figure>
 
 <br/>
+
+
+
 You can get the password from the given location using the cat command in the terminal. The command for getting the password would be like this:
 
    ```bash
