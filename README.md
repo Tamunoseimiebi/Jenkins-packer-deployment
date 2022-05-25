@@ -402,8 +402,8 @@ With our packer template setup, we shall proceed to building our image. To begin
   ```
    Packer will begin the build process, this might take a while depending on your network speed and packages required to download.  Packer will print output similar to what is shown below when the build is complete.
    
-   <a href="https://github.com/Tamunoseimiebi/Part-1-cloud_blog/">
-    <img src="images/hub.png" alt="hub" width="75%" >
+   <a href="https://github.com/Tamunoseimiebi/Jenkins-packer-deployment/">
+    <img src="images/6-aws.png" alt="hub" width="75%" >
     </a>
     <br>
 
