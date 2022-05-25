@@ -101,20 +101,20 @@ You can get the password from the given location using the cat command in the te
 
 It will navigate you to the next screen where it will ask for either “install the suggested plugins” or “select the plugins of your choice”.
 <figure>
-<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-19.png" alt="Trulli" style="width:100%">
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-19.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.2 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
 Select the “Install suggested plugins”. On the click, it will start installing the default plugins.
 
 <figure>
-<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-20.png" alt="Trulli" style="width:100%">
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-20.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.3 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
 After the successful installation of plugins, it will ask for the setting of the admin user’s user name, password, and email address.
 <figure>
-<img src="https://linuxhint.com/wp-content/uploads/2017/12/21-1.png" alt="Trulli" style="width:100%">
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/21-1.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.4 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
@@ -123,14 +123,14 @@ After the successful installation of plugins, it will ask for the setting of the
 Provide the required input fields and hit the “Save and Continue” button.
 
 <figure>
-<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-22.png" alt="Trulli" style="width:100%">
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-22.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.4 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
 Next, it will navigate you to a page for configuring the Jenkins URL. 
 
 <figure>
-<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-23.png" alt="Trulli" style="width:100%">
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-23.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.5 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
@@ -139,7 +139,7 @@ For now, go with the default auto-generated URL and click on the “Save and Fin
 On the completion of the Jenkins setup, you can have the screen with the success message “Jenkins is ready!”, as shown below. 
 
 <figure>
-<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-24.png" alt="Trulli" style="width:100%">
+<img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-24.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
