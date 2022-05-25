@@ -14,6 +14,7 @@ For this exercise follow the instructions below.
 6. Organize your code.
 7. write a proper Readme.Md to explain your choices and the process.
 
+***
 
 
 
@@ -82,7 +83,7 @@ In this section, we are going to install Jenkins without docker on an ec2 instan
    ```bash
     sudo systemctl start jenkins.service && sudo systemctl status jenkins.service
    ```
-
+***
 ## Set Up Jenkins
 To set up Jenkins, type your domain name or IP address along with port 8080 in the browser’s address bar, and you should have the Unlock Jenkins page asking for a password, like the shown picture below.
 <figure>
@@ -91,7 +92,7 @@ To set up Jenkins, type your domain name or IP address along with port 8080 in t
 </figure>
 <br />
 
-
+***
 You can get the password from the given location using the cat command in the terminal. The command for getting the password would be like this:
 
    ```bash
@@ -143,7 +144,7 @@ On the completion of the Jenkins setup, you can have the screen with the success
 <figcaption align = "center"><b>Fig.6 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
-
+***
 ##  Part 2
 
 ### Create an AMI with Harshicorp Packer
@@ -190,7 +191,7 @@ Available commands are:
     version         Prints the Packer version
 ```
 
-
+***
 ### Writing a Packer Template
 
 A Packer template is a configuration file that defines the image you want to build and how to build it. Packer templates use the Hashicorp Configuration Language (HCL).
@@ -393,7 +394,7 @@ In this section will shall spin up an EC2 instance with our built image.
 - Fill in the required fields: Name, security group, key pair and networking.
 
 - Finally, click on Launch Instance. Your image should now successfully spin up an EC2 instance.
-
+***
 ## Summary
  We successfully deployed Jenkins on AWS and also built an AMI with Packer that is pre-bundled with Jenkins.
 ## References
