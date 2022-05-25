@@ -93,6 +93,7 @@ To set up Jenkins, type your domain name or IP address along with port 8080 in t
 <br />
 
 ***
+## Enter default Password
 You can get the password from the given location using the cat command in the terminal. The command for getting the password would be like this:
 
    ```bash
@@ -100,19 +101,21 @@ You can get the password from the given location using the cat command in the te
    ```
  This command will print the password straight out and you can copy and paste it into the password field on the Jenkins Unlock screen and click on the “Continue” button.
 
+## Installation Cont'd
 It will navigate you to the next screen where it will ask for either “install the suggested plugins” or “select the plugins of your choice”.
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-19.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.2 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
+## Installation Cont'd
 Select the “Install suggested plugins”. On the click, it will start installing the default plugins.
 
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/How-to-Install-Jenkins-on-Ubuntu-20.png" alt="Trulli" style="width:70%">
 <figcaption align = "center"><b>Fig.3 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
-
+## Installation Cont'd
 After the successful installation of plugins, it will ask for the setting of the admin user’s user name, password, and email address.
 <figure>
 <img src="https://linuxhint.com/wp-content/uploads/2017/12/21-1.png" alt="Trulli" style="width:70%">
@@ -120,7 +123,7 @@ After the successful installation of plugins, it will ask for the setting of the
 </figure>
 
 
-
+## Installation Cont'd
 Provide the required input fields and hit the “Save and Continue” button.
 
 <figure>
@@ -128,6 +131,7 @@ Provide the required input fields and hit the “Save and Continue” button.
 <figcaption align = "center"><b>Fig.4 Jenkins Installation on Ubuntu </b></figcaption>
 </figure>
 
+## Installation Cont'd
 Next, it will navigate you to a page for configuring the Jenkins URL. 
 
 <figure>
