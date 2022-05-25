@@ -407,7 +407,7 @@ With our packer template setup, we shall proceed to building our image. To begin
 <figcaption align= "center"><b>Fig.8 Packer Build Output </b></figcaption>
 </figure> 
     <br>
-
+***
 Visit the [AWS](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Images:visibility=owned-by-me;search=learn-packer-linux-aws;sort=name) Image page to verify that your image has been deployed successfully.
 
  <figure>
@@ -422,11 +422,6 @@ In this section will shall spin up an EC2 instance with our built image.
 
 - Visit the [AWS](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Images:visibility=owned-by-me;search=learn-packer-linux-aws;sort=name) AMI page on your dashboard
 
-<figure>
-<img src="images/2-aws.png" alt="build" style="width:100%">
-<figcaption align= "center"><b>Fig.10 AWS AMI </b></figcaption>
-</figure> 
-    <br>
 
 - Select the desired image and click on launch instance from AMI
 
@@ -437,7 +432,7 @@ In this section will shall spin up an EC2 instance with our built image.
 <figcaption align= "center"><b>Fig.11 Launching AWS AMI </b></figcaption>
 </figure> 
     <br>
-
+***
 - Finally, click on Launch Instance. Your image should now successfully spin up an EC2 instance.
  <figure>
 <img src="images/3-aws.png" alt="build" style="width:100%">
